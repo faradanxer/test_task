@@ -67,7 +67,7 @@ async function combineData() {
     const combinedData = await Promise.all(
       users.map((user) => createUserObject(user, news))
     );
-    console.log(combinedData);
+    console.log(combinedData.slice(0,10));
   } catch (error) {
     console.error("Произошла ошибка:", error);
   }
